@@ -108,6 +108,7 @@ else:
     model.fit_generator(datagen.flow(x_train, y_train,
                                      batch_size=batch_size),
                         epochs=epochs,
+                        steps_per_epoch=10,
                         validation_data=(x_test, y_test),
                         workers=4)
 
